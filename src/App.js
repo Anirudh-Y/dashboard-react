@@ -16,7 +16,7 @@ function App() {
   return (
     <ModeContext.Provider value={{ darkmode: setDark , dark}} >
       <div className={dark ? "app dark" : "app"}>
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path='/'>
               <Route index element={<Home />} />
